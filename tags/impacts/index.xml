@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Impacts on Rob Briers</title>
+    <link>/tags/impacts/index.xml</link>
+    <description>Recent content in Impacts on Rob Briers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Rob Briers</copyright>
+    <atom:link href="/tags/impacts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Anthropogenic impacts</title>
+      <link>/project/impacts/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/project/impacts/</guid>
+      <description>
+
+&lt;p&gt;#&lt;img src=&#34;/img/spectrogram.png&#34; alt=&#34;spectrogram&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;underwater-noise-effects&#34;&gt;Underwater noise effects&lt;/h4&gt;
+
+&lt;p&gt;Increasing levels of underwater noise resulting from anthropogenic sources are an emerging source of pollution. I have recently become interested in the effects of this on invertebrates in marine ecosystems. This work is being undertaken in conjunction with &lt;a href=&#34;http://www.napier.ac.uk/people/karen-diele&#34; target=&#34;_blank&#34;&gt;Dr Karen Diele&lt;/a&gt; and other collaborators, with some of the practical work being undertaken at the &lt;a href=&#34;http://www.marinestation.co.uk&#34; target=&#34;_blank&#34;&gt;St Abbs Marine Station&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/halbeath.png&#34; alt=&#34;halbeath pond&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;diffuse-pollution-and-urban-drainage&#34;&gt;Diffuse pollution and urban drainage&lt;/h3&gt;
+
+&lt;p&gt;Diffuse pollution is a widespread problem in freshwater ecosysterms and my work has involved examining and predicting the impacts of diffuse pollution in freshwaters and evaluating the role of constructed wetlands (SUDS and similar approaches in rural areas) in alleviating these issues and supporting biodiversity goals. See &lt;a href=&#34;/publication/suds/&#34;&gt;Briers 2014&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

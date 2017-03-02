@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Rob Briers</title>
+    <link>/tags/r/index.xml</link>
+    <description>Recent content in R on Rob Briers</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Rob Briers</copyright>
+    <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A new website</title>
+      <link>/post/2017-03-01-a-new-website/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-03-01-a-new-website/</guid>
+      <description>&lt;!-- BLOGDOWN-BODY-BEFORE
+
+/BLOGDOWN-BODY-BEFORE --&gt;
+
+&lt;p&gt;So I finally got round to creating a new website. It has taken a fair while, as there is always something more pressing to do. The world of websites has moved on somewhat since my last homestyle HTML affair. I experimented with &lt;a href=&#34;https://www.wordpress.com&#34;&gt;Wordpress&lt;/a&gt; for a while, but was not keen on the limitations imposed. In the meantime a range of nice static website generators appeared.&lt;/p&gt;
+&lt;p&gt;As the site is hosted on Github pages, I tried out &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;, but at the same time I came across the &lt;a href=&#34;https://github.com/blogdown/blogdown&#34;&gt;&lt;code&gt;blogdown&lt;/code&gt;&lt;/a&gt; package for R, which is based on the &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; static site generator. This had the double advantage of allowing me to write in Markdown or Rmarkdown, simplifying content generation, and also being able to manage content within &lt;a href=&#34;https://www.rstudio.com&#34;&gt;RStudio&lt;/a&gt;, where I do all my data analysis and graphics anyway. So not only is writing content easy, I can also easily add in &lt;code&gt;R&lt;/code&gt; code and plots.&lt;/p&gt;
+&lt;p&gt;To demonstrate, let’s do a quick bit of plotting…&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load up the classic &amp;#39;mite&amp;#39; data from the vegan package and ggplot2
+library(vegan)
+library(ggplot2)
+data(mite)
+data(mite.xy)
+
+# bind the x and y coordinates with the TVEL abundance data
+df&amp;lt;-cbind.data.frame(mite$TVEL, mite.xy$x, mite.xy$y)
+
+# rename the columns
+colnames(df)&amp;lt;-c(&amp;quot;TVEL&amp;quot;, &amp;quot;x.coord&amp;quot;, &amp;quot;y.coord&amp;quot;)
+
+# produce a simple bubble plot of the abundances across space
+ggplot(df, aes(x=x.coord, y=y.coord)) +
+  geom_point(shape=1,color=&amp;quot;red&amp;quot;, size=df$TVEL) +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;#####content/post/2017-03-01-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt; Nice!&lt;/p&gt;
+&lt;p&gt;Documentation for the package is a bit sparse, but I found some really useful advice at &lt;a href=&#34;https://proquestionasker.github.io/blog/Making_Site/&#34; class=&#34;uri&#34;&gt;https://proquestionasker.github.io/blog/Making_Site/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are a huge range of site themes available for Hugo, which you can install using &lt;code&gt;blogdown&lt;/code&gt;. I went with the &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;Academic Theme&lt;/a&gt; and subsequently learnt how little I know about CSS, let alone YAML/TOML! Still, I got more or less sorted in the end. Have a look around - it’s still a bit of a work in progress, but the majority of things work now.&lt;/p&gt;
+
+
+&lt;!-- BLOGDOWN-HEAD
+
+
+
+
+/BLOGDOWN-HEAD --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
