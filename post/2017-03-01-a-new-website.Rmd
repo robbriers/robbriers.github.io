@@ -5,6 +5,7 @@ date: '2017-03-01'
 summary: "Setting up my site using blogdown and Hugo"
 categories: [test, web]
 draft: false
+comments: true
 tags: ["R", "code", "Markdown", "website"]
 ---
 So I finally got round to creating a new website. It has taken a fair while, as there is always something more pressing to do. The world of websites has moved on somewhat since my last homestyle HTML affair. I experimented with [Wordpress](https://www.wordpress.com) for a while, but was not keen on the limitations imposed. In the meantime a range of nice static website generators appeared.
