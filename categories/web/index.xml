@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Rob Briers</title>
-    <link>/categories/web/index.xml</link>
+    <link>https://robbriers.github.io/categories/web/index.xml</link>
     <description>Recent content in Web on Rob Briers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>A new website</title>
-      <link>/post/2017-03-01-a-new-website/</link>
+      <link>https://robbriers.github.io/post/2017-03-01-a-new-website/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-01-a-new-website/</guid>
+      <guid>https://robbriers.github.io/post/2017-03-01-a-new-website/</guid>
       <description>&lt;!-- BLOGDOWN-BODY-BEFORE
 
 /BLOGDOWN-BODY-BEFORE --&gt;
@@ -38,7 +38,7 @@ colnames(df)&amp;lt;-c(&amp;quot;TVEL&amp;quot;, &amp;quot;x.coord&amp;quot;, &a
 ggplot(df, aes(x=x.coord, y=y.coord)) +
   geom_point(shape=1,color=&amp;quot;red&amp;quot;, size=df$TVEL) +
   theme_bw()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;#####content/post/2017-03-01-a-new-website_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt; Nice!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/post/2017-03-01-a-new-website/figures/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt; Nice!&lt;/p&gt;
 &lt;p&gt;Documentation for the package is a bit sparse, but I found some really useful advice at &lt;a href=&#34;https://proquestionasker.github.io/blog/Making_Site/&#34; class=&#34;uri&#34;&gt;https://proquestionasker.github.io/blog/Making_Site/&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;There are a huge range of site themes available for Hugo, which you can install using &lt;code&gt;blogdown&lt;/code&gt;. I went with the &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;Academic Theme&lt;/a&gt; and subsequently learnt how little I know about CSS, let alone YAML/TOML! Still, I got more or less sorted in the end. Have a look around - it’s still a bit of a work in progress, but the majority of things work now.&lt;/p&gt;
 
