@@ -4,6 +4,14 @@
     
     
     <url>
+      <loc>https://robbriers.github.io/post/is-research-becoming-more-collaborative/</loc>
+      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://robbriers.github.io/post/2017-03-01-a-new-website/</loc>
       <lastmod>2017-03-01T00:00:00+00:00</lastmod>
     </url>
@@ -351,7 +359,16 @@
     
     <url>
       <loc>https://robbriers.github.io/tags/code/</loc>
-      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://robbriers.github.io/tags/collaboration/</loc>
+      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -407,7 +424,16 @@
     
     <url>
       <loc>https://robbriers.github.io/tags/r/</loc>
-      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://robbriers.github.io/tags/research/</loc>
+      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

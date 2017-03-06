@@ -36,11 +36,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://robbriers.github.io/post/2017-03-01-a-new-website/">
+  <link rel="canonical" href="https://robbriers.github.io/post/is-research-becoming-more-collaborative/">
 
   
 
-  <title>A new website | Rob Briers</title>
+  <title>Is research becoming more collaborative? | Rob Briers</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -162,31 +162,17 @@
   
 
   <div class="article-container">
-    <h1 itemprop="name">A new website</h1>
+    <h1 itemprop="name">Is research becoming more collaborative?</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
-    <time datetime="2017-03-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Wed, Mar 1, 2017
+    <time datetime="2017-03-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Mon, Mar 6, 2017
     </time>
   </span>
 
-  
-  
-  
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/test">test</a
-    >, 
-    
-    <a href="/categories/web">web</a
-    >
-    
-  </span>
-  
   
 
   
@@ -201,10 +187,10 @@
     <a href="/tags/code">code</a
     >, 
     
-    <a href="/tags/markdown">Markdown</a
+    <a href="/tags/research">research</a
     >, 
     
-    <a href="/tags/website">website</a
+    <a href="/tags/collaboration">collaboration</a
     >
     
   </span>
@@ -219,28 +205,63 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>So I finally got round to creating a new website. It has taken a fair while, as there is always something more pressing to do. The world of websites has moved on somewhat since my last homestyle HTML affair. I experimented with <a href="https://www.wordpress.com">Wordpress</a> for a while, but was not keen on the limitations imposed. In the meantime a range of nice static website generators appeared.</p>
-<p>As the site is hosted on Github pages, I tried out <a href="http://jekyllrb.com/">Jekyll</a>, but at the same time I came across the <a href="https://github.com/blogdown/blogdown"><code>blogdown</code></a> package for R, which is based on the <a href="https://gohugo.io/">Hugo</a> static site generator. This had the double advantage of allowing me to write in Markdown or Rmarkdown, simplifying content generation, and also being able to manage content within <a href="https://www.rstudio.com">RStudio</a>, where I do all my data analysis and graphics anyway. So not only is writing content easy, I can also easily add in <code>R</code> code and plots.</p>
-<p>To demonstrate, let’s do a quick bit of plotting…</p>
-<pre class="r"><code># load up the classic &#39;mite&#39; data from the vegan package and ggplot2
-library(vegan)
+      <p>I had an interesting discussion recently regarding the extent to which research is becoming a more collaborative enterprise. Gone is the image of the lone pioneer, locked away in the lab and wrestling with the world until the key advance is reached (Health and Safety would have a field day with this anyway!). With the ease of communication, sharing of data and analyses and other developments, it is far from suprising that there have been a growth in the extent to which collaboration has become the norm (see also evidence from Jonathan Adams in <a href="http://www.nature.com/nature/journal/v490/n7420/full/490335a.html">Nature</a>.</p>
+<p>On a more personal level, just thinking back over the time that I have been involved in research (which shockingly has now been 20 years!), I had the impression that the extent to which I have collaborated with a range of colleagues has increased over time. As a PhD student, my collaboration in terms of publication was largely limited to my supervisor, although I suspect that nowadays the range of individuals that students collaborate with is getting wider as well). Moving on to a post-doc, my collaborators started to widen, both within the project that I was employed on, and a number of ‘side-projects’ that resulted in publications too. Since taking up a full-time position in academia, the opportunities for collaboration and research are gradually broadened as well, with opportunities for much more diverse (some might say too diverse, showing a lack of focus!) projects, interactions with research students and research staff both internal and external. This more personal trajectory is slightly different from broader trends in research but I suspect is also a fairly common pattern for staff in academic institutions.</p>
+<p>Anyway, never one to let an impression get in the way of doing some number crunching, I decided to do some analysis of temporal change in my publication coauthorship, as a proxy for collaboration. I could have used the number of institutions involved as an alternative, but that underweights internal collaboration within my institution, which has been signficant for me at least.</p>
+<pre class="r"><code># analysis of changes in number of co-authors over time, based on my publication history
+
+# load the libraries needed, we will use viridis to colour the plot symbols
 library(ggplot2)
-data(mite)
-data(mite.xy)
+library(viridis)
 
-# bind the x and y coordinates with the TVEL abundance data
-df&lt;-cbind.data.frame(mite$TVEL, mite.xy$x, mite.xy$y)
+# read in the data direct from the Github repo - you can do it too if you want!
+auths&lt;-read.csv(&#39;https://raw.githubusercontent.com/robbriers/authors/master/coauthors.csv&#39;, header=TRUE)
 
-# rename the columns
-colnames(df)&lt;-c(&quot;TVEL&quot;, &quot;x.coord&quot;, &quot;y.coord&quot;)
+# plot the data to look at the trend, using poisson GLM for fitted line
+p1 &lt;- ggplot(auths, aes(x = year, y = authors, colour = authors)) +
+  geom_jitter(size=1.5) +
+  scale_color_viridis(end = 0.80) +
+  labs(title = &quot;Change in number of co-authors over time&quot;,
+       x = &quot;year of publication&quot;,
+       y = &quot;number of co-authors&quot;) +
+  geom_smooth(method = &quot;glm&quot;, method.args = list(family = &quot;poisson&quot;), se = TRUE) +
+  theme_bw() +
+  annotate(&quot;text&quot;, x=2006, y=14, label=&quot;Spot the multi-author workshop paper&quot;) +
+  theme(legend.position=&quot;none&quot;)
 
-# produce a simple bubble plot of the abundances across space
-ggplot(df, aes(x=x.coord, y=y.coord)) +
-  geom_point(shape=1,color=&quot;red&quot;, size=df$TVEL) +
-  theme_bw()</code></pre>
-<p><img src="/post/2017-03-01-a-new-website_files/figure-html/unnamed-chunk-1-1.png" width="672" /> Nice!</p>
-<p>Documentation for the package is a bit sparse, but I found some really useful advice at <a href="https://proquestionasker.github.io/blog/Making_Site/" class="uri">https://proquestionasker.github.io/blog/Making_Site/</a>.</p>
-<p>There are a huge range of site themes available for Hugo, which you can install using <code>blogdown</code>. I went with the <a href="https://github.com/gcushen/hugo-academic">Academic Theme</a> and subsequently learnt how little I know about CSS, let alone YAML/TOML! Still, I got more or less sorted in the end. Have a look around - it’s still a bit of a work in progress, but the majority of things work now.</p>
+# show the plot
+p1</code></pre>
+<p><img src="/post/2017-03-06-is-research-becoming-more-collaborative_files/figure-html/unnamed-chunk-1-1.png" width="672" /> So a definite upward trend in collaboration over time. To be more specific, we can fit the poisson model directly.</p>
+<pre class="r"><code># fit a poisson glm to the pattern of change, so we can make some predictions
+auth.m1&lt;-glm(authors~year, data=auths, family=&quot;poisson&quot;)
+summary(auth.m1)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = authors ~ year, family = &quot;poisson&quot;, data = auths)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.2282  -0.6275  -0.3446   0.3353   4.8714  
+## 
+## Coefficients:
+##               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -126.86415   33.11267  -3.831 0.000127 ***
+## year           0.06380    0.01649   3.870 0.000109 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for poisson family taken to be 1)
+## 
+##     Null deviance: 59.277  on 34  degrees of freedom
+## Residual deviance: 44.527  on 33  degrees of freedom
+## AIC: 149.9
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<pre class="r"><code># so how many co-authors will I have in 2040, assuming I make it?
+exp(predict(auth.m1, data.frame(year=2040)))</code></pre>
+<pre><code>##        1 
+## 26.86821</code></pre>
+<p>Wow, really looking forward to the ‘Track Changes’ on that manuscript!</p>
 
     </div>
   </div>
@@ -251,10 +272,10 @@ ggplot(df, aes(x=x.coord, y=y.coord)) +
   <nav>
   <ul class="pager">
     
-
+    <li class="previous"><a href="https://robbriers.github.io/post/2017-03-01-a-new-website/"><span
+      aria-hidden="true">&larr;</span> A new website</a></li>
     
-    <li class="next"><a href="https://robbriers.github.io/post/is-research-becoming-more-collaborative/">Is research becoming more collaborative? <span
-      aria-hidden="true">&rarr;</span></a></li>
+
     
   </ul>
 </nav>
@@ -268,9 +289,9 @@ ggplot(df, aes(x=x.coord, y=y.coord)) +
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'robbriers';
-    var disqus_identifier = 'https:\/\/robbriers.github.io\/post\/2017-03-01-a-new-website\/';
-    var disqus_title = 'A new website';
-    var disqus_url = 'https:\/\/robbriers.github.io\/post\/2017-03-01-a-new-website\/';
+    var disqus_identifier = 'https:\/\/robbriers.github.io\/post\/is-research-becoming-more-collaborative\/';
+    var disqus_title = 'Is research becoming more collaborative?';
+    var disqus_url = 'https:\/\/robbriers.github.io\/post\/is-research-becoming-more-collaborative\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
