@@ -239,13 +239,13 @@ if (file.exists(tempfilename)){
 # Start the geocoding process - address by address. geocode() function takes care of query speed limit.
 for (ii in seq(startindex, length(records_locs))){
   print(paste(&amp;quot;Working on index&amp;quot;, ii, &amp;quot;of&amp;quot;, length(records_locs)))
-  #query the google geocoder - this will pause here if we are over the limit.
+  # query the google geocoder - this will pause here if we are over the limit.
   result = getGeoDetails(records_locs[ii]) 
   print(result$status)
   result$index &amp;lt;- ii
-  #append the answer to the results file.
+  # append the answer to the results file.
   geocoded &amp;lt;- rbind(geocoded, result)
-  #save temporary results as we are going along
+  # save temporary results as we are going along
   saveRDS(geocoded, tempfilename)
 }
 
@@ -268,7 +268,7 @@ plotdata&amp;lt;-plotdata[plotdata$lat&amp;gt;49, ]
 &lt;/div&gt;
 &lt;div id=&#34;stage-4-map-and-animate-the-sightings.&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Stage 4: Map and animate the sightings.&lt;/h3&gt;
-&lt;p&gt;Again based around the functions of &lt;code&gt;ggmap&lt;/code&gt;, plus the ‘animation’ package. You need to install &lt;a href=&#34;http://www.imagemagick.org/script/index.php&#34;&gt;ImageMagick&lt;/a&gt; first as well. Plotting the sightings over time and grading the symbol colour by the date of record using the plasma scheme from the &lt;code&gt;viridis&lt;/code&gt; package as this shows up nicely against the Google Maps background. The &lt;code&gt;saveVideo&lt;/code&gt; function at the end outputs to an mp4 called animation.mp4 in the working directory.&lt;/p&gt;
+&lt;p&gt;Again based around the functions of &lt;code&gt;ggmap&lt;/code&gt;, plus the &lt;code&gt;animation&lt;/code&gt; package. You need to install &lt;a href=&#34;http://www.imagemagick.org/script/index.php&#34;&gt;ImageMagick&lt;/a&gt; first as well. Plotting the sightings over time and grading the symbol colour by the date of record using the plasma scheme from the &lt;code&gt;viridis&lt;/code&gt; package as this shows up nicely against the Google Maps background. The &lt;code&gt;saveVideo&lt;/code&gt; function at the end outputs to an mp4 called animation.mp4 in the working directory.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set up base map for plotting, setting centre long/lat
 myLocation &amp;lt;- c(-2, 54.5)
 
