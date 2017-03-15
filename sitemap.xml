@@ -4,6 +4,14 @@
     
     
     <url>
+      <loc>https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</loc>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://robbriers.github.io/post/is-research-becoming-more-collaborative/</loc>
       <lastmod>2017-03-06T00:00:00+00:00</lastmod>
     </url>
@@ -359,7 +367,7 @@
     
     <url>
       <loc>https://robbriers.github.io/tags/code/</loc>
-      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -384,12 +392,30 @@
   
     
     
+    <url>
+      <loc>https://robbriers.github.io/categories/dataviz/</loc>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
   
     
     
     <url>
       <loc>https://robbriers.github.io/tags/impacts/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://robbriers.github.io/tags/map/</loc>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -423,8 +449,17 @@
     
     
     <url>
+      <loc>https://robbriers.github.io/categories/r/</loc>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://robbriers.github.io/tags/r/</loc>
-      <lastmod>2017-03-06T00:00:00+00:00</lastmod>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -469,6 +504,24 @@
     <url>
       <loc>https://robbriers.github.io/categories/test/</loc>
       <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://robbriers.github.io/tags/twitter/</loc>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://robbriers.github.io/tags/waxwing/</loc>
+      <lastmod>2017-03-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

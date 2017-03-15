@@ -11,6 +11,307 @@
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Mapping the spread of a migratory bird using Twitter</title>
+      <link>https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/waxwing.jpg&#34; /&gt; I like Waxwings: big, brassy, berry-eating flockers! Living on the east coast of Scotland I should have a better than average chance of seeing them, but seem to have a knack of being at places where they are seen either just before or just after they appear.&lt;/p&gt;
+&lt;p&gt;Luckily we have &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt; (&lt;a href=&#34;https://twitter.com/WaxwingsUK&#34; class=&#34;uri&#34;&gt;https://twitter.com/WaxwingsUK&lt;/a&gt;) on Twitter to report the sightings. Having watched the bumper crop of sightings unfold since last autumn I started to think about whether it would be possible to visualise the spread of records over time, using the info from the timeline of &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The following is my attempt. It took more than a few train journeys to work out the details and makes use of some excellent R scripts, functions and packages that other folks have put together (acknowledged in the code that follows). In order to replicate this, you need a Twitter account and register for API keys as detailed in the links.&lt;/p&gt;
+&lt;div id=&#34;stage-1-download-the-content-of-waxwingsuk-twitter-timeline-from-autumn-2016-until-present-2017-03-13.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Stage 1: Download the content of &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt; Twitter timeline from autumn 2016 until present (2017-03-13).&lt;/h3&gt;
+&lt;p&gt;The first part is fairly straightforward, using the TwitteR package. You will need to replace the relevant key strings with the ones that Twitter gives you when you register.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Fire up the Quattro, sorry, I mean load up the required packages
+library(twitteR)
+library(lubridate)
+library(ggmap)
+library(stringi)
+library(viridis)
+library(animation)
+
+# you also need ImageMagick installed to save animations
+# https://www.imagemagick.org/
+
+# do initial setup of Twitter oauth and store in .http-oauth file
+# see details at:
+# http://bigcomputing.blogspot.co.uk/2016/02/the-twitter-r-package-by-jeff-gentry-is.html
+
+consumer_key &amp;lt;- &amp;quot;your_key&amp;quot;
+consumer_secret &amp;lt;- &amp;quot;your_key&amp;quot;
+access_token &amp;lt;- &amp;quot;your_key&amp;quot;
+access_secret &amp;lt;- &amp;quot;your_key&amp;quot;
+#setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
+
+# extract tweet content
+waxwing_tweets &amp;lt;- userTimeline(&amp;quot;WaxwingsUK&amp;quot;, n=3200)
+
+# set maxID to extract different parts
+tweet.df &amp;lt;- twListToDF(waxwing_tweets)
+all_tweets&amp;lt;-tweet.df
+last_num&amp;lt;-as.numeric(tweet.df$id[nrow(tweet.df)])
+
+# iterate through timeline, extracting each set of tweets and updating last_num
+# needed due to TWitter API limits, see:
+# https://dev.twitter.com/rest/public/timelines
+repeat{
+  waxwing_tweets &amp;lt;- userTimeline(&amp;quot;WaxwingsUK&amp;quot;, maxID=as.character(last_num), n=3200)
+  tweet.df &amp;lt;- twListToDF(waxwing_tweets)
+  all_tweets &amp;lt;-rbind.data.frame(all_tweets, tweet.df)
+  n_recs&amp;lt;-nrow(all_tweets)
+  last_num&amp;lt;-as.numeric(tweet.df$id[nrow(tweet.df)])-1
+  
+  # we will stop at 1000 tweets as this is more than enough
+  if(n_recs&amp;gt;1000){
+    break
+  }
+}
+
+# now need to extract those in 2016 or 17 based on date field (created) which
+# is already in POSIXct format, so should be easy using lubridate
+all_tweets$Year&amp;lt;-year(all_tweets$created)
+all_tweets$Month&amp;lt;-month(all_tweets$created)
+
+# extract all 2017 tweets
+records_2017&amp;lt;-all_tweets[all_tweets$Year==2017, ]
+
+# extract 2016 tweets after April, which is the break between seasons
+records_2016&amp;lt;-all_tweets[all_tweets$Year==2016 &amp;amp; all_tweets$Month&amp;gt;4, ]
+
+# combine the records together
+records&amp;lt;-rbind.data.frame(records_2017, records_2016)
+
+# remove RTs and replies as the info is not consistently structured
+# so can&amp;#39;t process easily
+rts&amp;lt;-is.na(records$isRetweet)
+records&amp;lt;-records[rts!=TRUE, ]
+replies&amp;lt;-is.na(records$replyToSN)
+records&amp;lt;-records[replies!=FALSE, ]
+
+# just extract location string and date created columns
+records&amp;lt;-cbind.data.frame(records$text, records$created)
+names(records)&amp;lt;-c(&amp;quot;location&amp;quot;, &amp;quot;date&amp;quot;)
+
+# sort records on date for subsequent plotting
+records&amp;lt;- records[order(records$date),] &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stage-2-text-wrangling-to-extract-the-location-and-date-of-sightings.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Stage 2: Text wrangling to extract the location and date of sightings.&lt;/h3&gt;
+&lt;p&gt;Luckily &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt; provides the records of sightings in a fairly consistent format, which makes life easier (nice &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt;, keep it up!). R does not have the best string manipulation functionality, but we can do it without too much hair-pulling.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# find rows with illegal characters, by conversion to control seq
+illegal_chrs&amp;lt;-grepl(&amp;quot;[[:cntrl:]]&amp;quot;, stringi::stri_enc_toascii(records$location))
+
+# remove these from the dataframe, but keep all fields
+records&amp;lt;-records[illegal_chrs!=TRUE, ]
+
+# convert to character
+records$location&amp;lt;-as.character(records$location)
+
+# split the tweet text at the : to remove the leading date info
+records_locs&amp;lt;-strsplit(records$location, &amp;quot;:&amp;quot;)
+
+# bind the records back to a df
+records_locs&amp;lt;-do.call(rbind.data.frame, records_locs)
+
+# just keep the address text, convert to character vector
+records_locs&amp;lt;-as.character(records_locs[[2]])
+
+# now split for each location, separated by ,
+records_locs&amp;lt;-strsplit(records_locs, &amp;quot;,&amp;quot;)
+
+# use length of list to determine number of records in each tweet
+date_reps&amp;lt;-as.numeric(lapply(records_locs, function(x) length(x)))
+
+# unlist records to a vector
+records_locs&amp;lt;-unlist(records_locs)
+
+# repeat dates appropriate times
+dates&amp;lt;-rep(records$date, date_reps)
+
+# some locations have more than one road/location, separated by &amp;#39;/&amp;#39;
+# Google Maps API does not like these, so just use last part
+
+# define function to split string based on last occurrence of set string
+# and return the right hand portion
+splitText&amp;lt;-function(x, string){
+  pos&amp;lt;-gregexpr(string, x)
+  posmax&amp;lt;-pos[[1]]
+  # if not -1, i.e. string is found then
+  if (posmax[1]!=-1){
+    posmax&amp;lt;-posmax[length(posmax)]
+    keep&amp;lt;-substr(x, posmax+1, nchar(x))
+    return(keep)
+  }
+  else{
+    # if the string is not found then return it unmodified
+    return(x)
+    }
+}
+
+# convert records_locs to dataframe for apply
+records_locs&amp;lt;-as.data.frame(records_locs, stringsAsFactors = FALSE)
+
+# process out all the &amp;#39;/&amp;#39; parts of the locations using splitText function
+records_locs&amp;lt;-apply(records_locs, 1, splitText, &amp;quot;/&amp;quot;)
+
+# split again based on &amp;#39;+&amp;#39; to remove flock size info
+records_locs&amp;lt;-as.data.frame(records_locs, stringsAsFactors = FALSE)
+
+# process out all the &amp;#39;60+ etc&amp;#39; parts of the text
+records_locs&amp;lt;-apply(records_locs, 1, splitText, &amp;quot;\\+&amp;quot;)
+
+# gsub the merry hell out of the location strings to make them suitable for 
+# Google Maps API call
+
+records_locs&amp;lt;-gsub(&amp;quot; -&amp;quot;,&amp;quot;,&amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; \\(&amp;quot;, &amp;quot;, &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot;\\)&amp;quot;, &amp;quot;, UK&amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot;@&amp;quot;, &amp;quot;&amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot;_&amp;quot;, &amp;quot; &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot;/&amp;quot;, &amp;quot; &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; Dr &amp;quot;, &amp;quot; Drive &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; Rd &amp;quot;, &amp;quot; Road &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; Ln &amp;quot;, &amp;quot; Lane&amp;quot; , records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; Crt &amp;quot;, &amp;quot; Court &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; St &amp;quot;, &amp;quot; Street &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; Cl &amp;quot;, &amp;quot; Close &amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; car park&amp;quot;, &amp;quot;&amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; opp&amp;quot;, &amp;quot;&amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; private garden&amp;quot;, &amp;quot;&amp;quot;, records_locs)
+records_locs&amp;lt;-gsub(&amp;quot; &amp;amp;amp;&amp;quot;, &amp;quot; and&amp;quot;, records_locs)
+
+# trim whitespace, now ready for the geocoding stage
+records_locs&amp;lt;-trimws(records_locs)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stage-3-geocoding-the-sightings.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Stage 3: Geocoding the sightings.&lt;/h3&gt;
+&lt;p&gt;This makes use of the &lt;code&gt;geocode&lt;/code&gt; function in the excellent &lt;code&gt;ggmap&lt;/code&gt; package. Even better Shane Lynn has written a function that allows you to ping the Google Maps API up to the public use limit (2500 per day) and pause until you can do some more. We only have about 1600 locations so can do it in one go.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Function to geocode addresses via Google Maps API, by Shane Lynn
+# http://www.shanelynn.ie/massive-geocoding-with-r-and-google-maps/
+
+# define a function that will process googles server responses for us.
+getGeoDetails &amp;lt;- function(address){
+  # use the gecode function to query google servers
+  geo_reply = geocode(address, output=&amp;#39;all&amp;#39;, messaging=TRUE, override_limit=TRUE)
+  # now extract the bits that we need from the returned list
+  answer &amp;lt;- data.frame(lat=NA, long=NA, accuracy=NA, formatted_address=NA, address_type=NA, status=NA)
+  answer$status &amp;lt;- geo_reply$status
+  
+  # if we are over the query limit - want to pause for an hour
+  while(geo_reply$status == &amp;quot;OVER_QUERY_LIMIT&amp;quot;){
+    print(&amp;quot;OVER QUERY LIMIT - Pausing for 1 hour at:&amp;quot;) 
+    time &amp;lt;- Sys.time()
+    print(as.character(time))
+    Sys.sleep(60*60)
+    geo_reply = geocode(address, output=&amp;#39;all&amp;#39;, messaging=TRUE, override_limit=TRUE)
+    answer$status &amp;lt;- geo_reply$status
+  }
+  
+  # return Na&amp;#39;s if we didn&amp;#39;t get a match:
+  if (geo_reply$status != &amp;quot;OK&amp;quot;){
+    return(answer)
+  }
+  # else, extract what we need from the Google server reply into a dataframe:
+  answer$lat &amp;lt;- geo_reply$results[[1]]$geometry$location$lat
+  answer$long &amp;lt;- geo_reply$results[[1]]$geometry$location$lng
+  if (length(geo_reply$results[[1]]$types) &amp;gt; 0){
+    answer$accuracy &amp;lt;- geo_reply$results[[1]]$types[[1]]
+  }
+  answer$address_type &amp;lt;- paste(geo_reply$results[[1]]$types, collapse=&amp;#39;,&amp;#39;)
+  answer$formatted_address &amp;lt;- geo_reply$results[[1]]$formatted_address
+  
+  return(answer)
+}
+
+# initialise a dataframe to hold the results
+geocoded &amp;lt;- data.frame()
+# find out where to start in the address list (if the script was interrupted before):
+startindex &amp;lt;- 1
+# if a temp file exists - load it up and count the rows!
+tempfilename &amp;lt;- &amp;#39;temp_geocoded.rds&amp;#39;
+if (file.exists(tempfilename)){
+  print(&amp;quot;Found temp file - resuming from index:&amp;quot;)
+  geocoded &amp;lt;- readRDS(tempfilename)
+  startindex &amp;lt;- nrow(geocoded)
+  print(startindex)
+}
+
+# Start the geocoding process - address by address. geocode() function takes care of query speed limit.
+for (ii in seq(startindex, length(records_locs))){
+  print(paste(&amp;quot;Working on index&amp;quot;, ii, &amp;quot;of&amp;quot;, length(records_locs)))
+  #query the google geocoder - this will pause here if we are over the limit.
+  result = getGeoDetails(records_locs[ii]) 
+  print(result$status)
+  result$index &amp;lt;- ii
+  #append the answer to the results file.
+  geocoded &amp;lt;- rbind(geocoded, result)
+  #save temporary results as we are going along
+  saveRDS(geocoded, tempfilename)
+}
+
+# geocoded now contains the lat and long (plus other things)
+# of the records, in date order, so combine with other info
+plotdata&amp;lt;-cbind.data.frame(records_locs, dates, geocoded$long, geocoded$lat)
+names(plotdata)&amp;lt;-c(&amp;quot;location&amp;quot;, &amp;quot;date&amp;quot;, &amp;quot;long&amp;quot;, &amp;quot;lat&amp;quot;)
+
+# remove those records that did not get geocoded (NA)
+noloc&amp;lt;-is.na(plotdata$long)
+plotdata&amp;lt;-plotdata[noloc!=TRUE, ]
+
+# some geocoding results are not in the UK despite best efforts so
+# need to exclude these, using UK lat/long limits (only lower lat value
+# needed in this case)
+plotdata&amp;lt;-plotdata[plotdata$lat&amp;gt;49, ]
+
+# we have lost 272 records on the way through, through no/wrong geocoding
+# that is not too bad really, still got ~1400&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;stage-4-map-and-animate-the-sightings.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Stage 4: Map and animate the sightings.&lt;/h3&gt;
+&lt;p&gt;Again based around the functions of &lt;code&gt;ggmap&lt;/code&gt;, plus the ‘animation’ package. You need to install &lt;a href=&#34;http://www.imagemagick.org/script/index.php&#34;&gt;ImageMagick&lt;/a&gt; first as well. Plotting the sightings over time and grading the symbol colour by the date of record using the plasma scheme from the &lt;code&gt;viridis&lt;/code&gt; package as this shows up nicely against the Google Maps background. The &lt;code&gt;saveVideo&lt;/code&gt; function at the end outputs to an mp4 called animation.mp4 in the working directory.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set up base map for plotting, setting centre long/lat
+myLocation &amp;lt;- c(-2, 54.5)
+
+# using Google roadmap as the base
+waxMap &amp;lt;- get_map(location=myLocation, zoom=5, source=&amp;quot;google&amp;quot;, maptype=&amp;quot;roadmap&amp;quot;, crop=FALSE)
+
+# set up colours for points, based on viridis plasma scheme
+plotdata$colours&amp;lt;-plasma(1395, begin=0, end =0.9)
+
+# set up function to plot map in sequence
+plotmaps &amp;lt;- function(){
+    for (m in seq(1, nrow(plotdata))){
+      points&amp;lt;-plotdata[1:m, ]
+      p&amp;lt;-ggmap(waxMap)+
+        geom_point(aes(x = long, y = lat), data = points, alpha = 1, color=points$colours, size = 2)+
+        scale_x_continuous(limits = c(-11, 4), expand = c(0, 0)) +
+        scale_y_continuous(limits = c(49, 61), expand = c(0, 0))
+    print(p)
+  }
+}  
+
+# set video options
+oopt = ani.options(interval = 0.05, nmax = nrow(plotdata))  
+
+# output video; this will throw a series of warnings over
+# changing scales of axes, but it is all good
+saveVideo(plotmaps(),interval = 0.05)&lt;/code&gt;&lt;/pre&gt;
+&lt;div style=&#34;position:relative;padding-bottom:56%;padding-top:20px;height:0;&#34;&gt;
+&lt;iframe src=&#34;https://onlinevideo.napier.ac.uk/player?autostart=n&amp;amp;fullscreen=y&amp;amp;width=0&amp;amp;height=0&amp;amp;videoId=9832&amp;amp;quality=hi&amp;amp;captions=n&amp;amp;chapterId=0&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;position:absolute;top:0;left:0;width:100%;height:100%;&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;We can also do a static version as well as video.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p&amp;lt;-ggmap(waxMap)+
+  geom_point(aes(x = long, y = lat), data = plotdata, alpha = 1, color=plotdata$colours, size = 2)+
+  scale_x_continuous(limits = c(-11, 4), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(49, 61), expand = c(0, 0))
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Is research becoming more collaborative?</title>
       <link>https://robbriers.github.io/post/is-research-becoming-more-collaborative/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
