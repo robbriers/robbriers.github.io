@@ -333,4 +333,4 @@ p<-ggmap(waxMap)+
   scale_y_continuous(limits = c(49, 61), expand = c(0, 0))
 p
 ```
-
+Waxwing image CC0 [gustavmelin0](https://pixabay.com/en/waxwing-bird-rowan-rowan-berries-1163294/).
