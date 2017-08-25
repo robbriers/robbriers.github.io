@@ -2,42 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spatial on Rob Briers</title>
-    <link>https://robbriers.github.io/tags/spatial/index.xml</link>
+    <link>/tags/spatial/</link>
     <description>Recent content in Spatial on Rob Briers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Rob Briers</copyright>
-    <atom:link href="/tags/spatial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/spatial/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Spatial Ecology</title>
-      <link>https://robbriers.github.io/project/spatial-ecology/</link>
+      <link>/project/spatial-ecology/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/project/spatial-ecology/</guid>
+      <guid>/project/spatial-ecology/</guid>
       <description>
 
 &lt;p&gt;I am interested in how populations and communities vary and interact across space. This work is wide ranging and covers both field-based and modelling approaches, often using GIS.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/trout.png&#34; alt=&#34;trout&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/trout.png&#34; alt=&#34;trout&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;stable-isotope-ecology-of-salmonids&#34;&gt;Stable isotope ecology of salmonids&lt;/h3&gt;
 
-&lt;p&gt;I am currently working with &lt;a href=&#34;http://www.tweedfoundation.org.uk&#34; target=&#34;_blank&#34;&gt;The Tweed Foundation&lt;/a&gt;, &lt;a href=&#34;http://deveron.org/&#34; target=&#34;_blank&#34;&gt;The Deveron, Isla and Bogie Charitable Trust&lt;/a&gt; and other partners using stable isotope approaches to examine the distribution of migratory and non-migratory trout reproduction across river systems. Distinction in stable isotope (C and N) characteristics allows reproduction derived from the different forms to be distinguished at the fry stage (see &lt;a href=&#34;https://robbriers.github.io/publication/carotenoids/&#34;&gt;Briers et al 2013&lt;/a&gt;), but there is a strong influence of catchment land-use on the rate and extent of temporal change post hatching, which we are currently investigating.&lt;/p&gt;
+&lt;p&gt;I am currently working with &lt;a href=&#34;http://www.tweedfoundation.org.uk&#34; target=&#34;_blank&#34;&gt;The Tweed Foundation&lt;/a&gt;, &lt;a href=&#34;http://deveron.org/&#34; target=&#34;_blank&#34;&gt;The Deveron, Isla and Bogie Charitable Trust&lt;/a&gt; and other partners using stable isotope approaches to examine the distribution of migratory and non-migratory trout reproduction across river systems. Distinction in stable isotope (C and N) characteristics allows reproduction derived from the different forms to be distinguished at the fry stage (see &lt;a href=&#34;/publication/carotenoids/&#34;&gt;Briers et al 2013&lt;/a&gt;), but there is a strong influence of catchment land-use on the rate and extent of temporal change post hatching, which we are currently investigating.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/rhizophora.png&#34; alt=&#34;mangroves&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/rhizophora.png&#34; alt=&#34;mangroves&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;mangrove-carbon-storage-and-management&#34;&gt;Mangrove carbon storage and management&lt;/h3&gt;
 
-&lt;p&gt;In conjunction with &lt;a href=&#34;http://www.napier.ac.uk/people/mark-huxham&#34; target=&#34;_blank&#34;&gt;Prof Mark Huxham&lt;/a&gt; here in the School, colleagues from &lt;a href=&#34;https://ecometrica.com&#34; target=&#34;_blank&#34;&gt;Ecometrica&lt;/a&gt; and &lt;a href=&#34;http://www.kmfri.co.ke&#34; target=&#34;_blank&#34;&gt;KMFRI&lt;/a&gt;, I have been undertaking research combining field survey with GIS and spatial statistical techniques examine variation in carbon storage in mangrove ecosystems, rates of loss drivers of change. Example papers include &lt;a href=&#34;https://robbriers.github.io/publication/mangrove_carbon/&#34;&gt;Gress et al 2017&lt;/a&gt; and &lt;a href=&#34;https://robbriers.github.io/publication/mangrove_risk/&#34;&gt;Rideout et al 2013&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In conjunction with &lt;a href=&#34;http://www.napier.ac.uk/people/mark-huxham&#34; target=&#34;_blank&#34;&gt;Prof Mark Huxham&lt;/a&gt; here in the School, colleagues from &lt;a href=&#34;https://ecometrica.com&#34; target=&#34;_blank&#34;&gt;Ecometrica&lt;/a&gt; and &lt;a href=&#34;http://www.kmfri.co.ke&#34; target=&#34;_blank&#34;&gt;KMFRI&lt;/a&gt;, I have been undertaking research combining field survey with GIS and spatial statistical techniques examine variation in carbon storage in mangrove ecosystems, rates of loss drivers of change. Example papers include &lt;a href=&#34;/publication/mangrove_carbon/&#34;&gt;Gress et al 2017&lt;/a&gt; and &lt;a href=&#34;/publication/mangrove_risk/&#34;&gt;Rideout et al 2013&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/pond4.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/pond4.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;wonderful-ponds&#34;&gt;Wonderful ponds!&lt;/h3&gt;
 
-&lt;p&gt;Ponds are great systems for addressing a whole range of ecological questions and I have a long-standing interest in patterns in population and community structure of pond dwelling organisms (mostly invertebrates) across space, along with assessment of their conservation value. See for example &lt;a href=&#34;https://robbriers.github.io/publication/urban_ponds/&#34;&gt;Hill et al &lt;em&gt;in press&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;https://robbriers.github.io/publication/spatial_pond/&#34;&gt;Briers &amp;amp; Biggs 2005&lt;/a&gt; and &lt;a href=&#34;https://robbriers.github.io/publication/metapop/&#34;&gt;Briers &amp;amp; Warren 2000&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ponds are great systems for addressing a whole range of ecological questions and I have a long-standing interest in patterns in population and community structure of pond dwelling organisms (mostly invertebrates) across space, along with assessment of their conservation value. See for example &lt;a href=&#34;/publication/urban_ponds/&#34;&gt;Hill et al &lt;em&gt;in press&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;/publication/spatial_pond/&#34;&gt;Briers &amp;amp; Biggs 2005&lt;/a&gt; and &lt;a href=&#34;/publication/metapop/&#34;&gt;Briers &amp;amp; Warren 2000&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/gam.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/gam.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;other-areas&#34;&gt;Other areas&lt;/h3&gt;
 

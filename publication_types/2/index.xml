@@ -2,145 +2,146 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 on Rob Briers</title>
-    <link>https://robbriers.github.io/publication_types/2/index.xml</link>
+    <link>/publication_types/2/</link>
     <description>Recent content in 2 on Rob Briers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Rob Briers</copyright>
-    <atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Urban ponds as an aquatic biodiversity resource in modified landscapes</title>
-      <link>https://robbriers.github.io/publication/urban_ponds/</link>
+      <link>/publication/urban_ponds/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/urban_ponds/</guid>
+      <guid>/publication/urban_ponds/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Evaluating, predicting and mapping belowground carbon stores in Kenyan mangroves</title>
-      <link>https://robbriers.github.io/publication/mangrove_carbon/</link>
+      <link>/publication/mangrove_carbon/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/mangrove_carbon/</guid>
+      <guid>/publication/mangrove_carbon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Eurasian lynx natal den site and maternal home-range selection in multi-use landscapes of Norway</title>
-      <link>https://robbriers.github.io/publication/lynx_dens/</link>
+      <link>/publication/lynx_dens/</link>
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/lynx_dens/</guid>
+      <guid>/publication/lynx_dens/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Applying Climate Compatible Development and economic valuation to coastal management: A case study of Kenya&#39;s mangrove forests</title>
-      <link>https://robbriers.github.io/publication/mangrove_ccd/</link>
+      <link>/publication/mangrove_ccd/</link>
       <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/mangrove_ccd/</guid>
+      <guid>/publication/mangrove_ccd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The development and testing of a multiple-use zoning scheme for Scottish waters</title>
-      <link>https://robbriers.github.io/publication/zoning_scheme/</link>
+      <link>/publication/zoning_scheme/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/zoning_scheme/</guid>
+      <guid>/publication/zoning_scheme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Structural and functional indices show similar performance in marine ecosystem quality assessment</title>
-      <link>https://robbriers.github.io/publication/indicators/</link>
+      <link>/publication/indicators/</link>
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/indicators/</guid>
+      <guid>/publication/indicators/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Invertebrate Communities and Environmental Conditions in a Series of Urban Drainage Ponds in Eastern Scotland: Implications for Biodiversity and Conservation Value of SUDS</title>
-      <link>https://robbriers.github.io/publication/suds/</link>
+      <link>/publication/suds/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/suds/</guid>
+      <guid>/publication/suds/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Making predictions of mangrove deforestation: a comparison of two methods in Kenya</title>
-      <link>https://robbriers.github.io/publication/mangrove_risk/</link>
+      <link>/publication/mangrove_risk/</link>
       <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/mangrove_risk/</guid>
+      <guid>/publication/mangrove_risk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mapping of mangrove forest land cover change along the Kenya coastline using Landsat imagery</title>
-      <link>https://robbriers.github.io/publication/mangrove_change/</link>
+      <link>/publication/mangrove_change/</link>
       <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/mangrove_change/</guid>
+      <guid>/publication/mangrove_change/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Population differentiation and temporal changes of carotenoid pigments and stable isotope ratios in the offspring of anadromous and non-anadromous trout Salmo trutta</title>
-      <link>https://robbriers.github.io/publication/carotenoids/</link>
+      <link>/publication/carotenoids/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/carotenoids/</guid>
+      <guid>/publication/carotenoids/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The ecological effectiveness of protected areas: The United Kingdom</title>
-      <link>https://robbriers.github.io/publication/protected_areas/</link>
+      <link>/publication/protected_areas/</link>
       <pubDate>Fri, 01 Sep 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/protected_areas/</guid>
+      <guid>/publication/protected_areas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Phenotype-environment matching in the shore crab (Carcinus maenas)</title>
-      <link>https://robbriers.github.io/publication/phenotype/</link>
+      <link>/publication/phenotype/</link>
       <pubDate>Sat, 01 Apr 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/phenotype/</guid>
+      <guid>/publication/phenotype/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Optimal selection of a connected reserve network</title>
-      <link>https://robbriers.github.io/publication/connected/</link>
+      <link>/publication/connected/</link>
       <pubDate>Wed, 01 Mar 2006 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/connected/</guid>
+      <guid>/publication/connected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spatial patterns in pond invertehrate communities: separating environmental and distance effects</title>
-      <link>https://robbriers.github.io/publication/spatial_pond/</link>
+      <link>/publication/spatial_pond/</link>
       <pubDate>Tue, 01 Nov 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/spatial_pond/</guid>
+      <guid>/publication/spatial_pond/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Designing a conservation reserve network with minimal fragmentation: A linear integer programming approach</title>
-      <link>https://robbriers.github.io/publication/min_frag/</link>
+      <link>/publication/min_frag/</link>
       <pubDate>Thu, 01 Sep 2005 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/publication/min_frag/</guid>
+      <guid>/publication/min_frag/</guid>
       <description></description>
     </item>
     

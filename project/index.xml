@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Rob Briers</title>
-    <link>https://robbriers.github.io/project/index.xml</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Rob Briers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Rob Briers</copyright>
     <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/project/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Anthropogenic impacts</title>
-      <link>https://robbriers.github.io/project/impacts/</link>
+      <link>/project/impacts/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/project/impacts/</guid>
+      <guid>/project/impacts/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/spectrogram.png&#34; alt=&#34;spectrogram&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/spectrogram.png&#34; alt=&#34;spectrogram&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;underwater-noise-effects&#34;&gt;Underwater noise effects&lt;/h3&gt;
 
 &lt;p&gt;Increasing levels of underwater noise resulting from anthropogenic sources are an emerging source of pollution. I have recently become interested in the effects of this on invertebrates in marine ecosystems. This work is being undertaken in conjunction with &lt;a href=&#34;http://www.napier.ac.uk/people/karen-diele&#34; target=&#34;_blank&#34;&gt;Dr Karen Diele&lt;/a&gt; and other collaborators, with some of the practical work being undertaken at the &lt;a href=&#34;http://www.marinestation.co.uk&#34; target=&#34;_blank&#34;&gt;St Abbs Marine Station&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/halbeath.png&#34; alt=&#34;halbeath pond&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/halbeath.png&#34; alt=&#34;halbeath pond&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;diffuse-pollution-and-urban-drainage&#34;&gt;Diffuse pollution and urban drainage&lt;/h3&gt;
 
-&lt;p&gt;Diffuse pollution is a widespread problem in freshwater ecosysterms and my work has involved examining and predicting the impacts of diffuse pollution in freshwaters and evaluating the role of constructed wetlands (SUDS and similar approaches in rural areas) in alleviating these issues and supporting biodiversity goals. See &lt;a href=&#34;https://robbriers.github.io/publication/suds/&#34;&gt;Briers 2014&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Diffuse pollution is a widespread problem in freshwater ecosysterms and my work has involved examining and predicting the impacts of diffuse pollution in freshwaters and evaluating the role of constructed wetlands (SUDS and similar approaches in rural areas) in alleviating these issues and supporting biodiversity goals. See &lt;a href=&#34;/publication/suds/&#34;&gt;Briers 2014&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Coding</title>
-      <link>https://robbriers.github.io/project/coding/</link>
+      <link>/project/coding/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/project/coding/</guid>
+      <guid>/project/coding/</guid>
       <description>
 
 &lt;h3 id=&#34;r-code&#34;&gt;R code&lt;/h3&gt;
@@ -52,11 +52,11 @@
 
 &lt;p&gt;I have developed a few add-ins for Excel using VBA. You can download these (zipped add-in files with outline instructions) below:&lt;/p&gt;
 
-&lt;p&gt;&lt;i class=&#34;fa fa-code&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://robbriers.github.io/code/Depletion.zip&#34;&gt;Depletion.xla&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-code&#34;&gt;&lt;/i&gt; &lt;a href=&#34;/code/Depletion.zip&#34;&gt;Depletion.xla&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This calculates population estimates using the Carle &amp;amp; Strube and Zippen estimators&lt;/p&gt;
 
-&lt;p&gt;&lt;i class=&#34;fa fa-code&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://robbriers.github.io/code/BMWP.zip&#34;&gt;BMWP.xla&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i class=&#34;fa fa-code&#34;&gt;&lt;/i&gt; &lt;a href=&#34;/code/BMWP.zip&#34;&gt;BMWP.xla&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;This calculates BMWP and associated indices for UK freshwater invertebrate samples. Now superceded by the &lt;code&gt;biotic&lt;/code&gt; package above, but available for posterity!&lt;/p&gt;
 </description>
@@ -64,63 +64,63 @@
     
     <item>
       <title>Conservation planning</title>
-      <link>https://robbriers.github.io/project/conservation/</link>
+      <link>/project/conservation/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/project/conservation/</guid>
+      <guid>/project/conservation/</guid>
       <description>
 
 &lt;p&gt;I have had a long-standing interest in applying formal optimisation methods in the evaluation of priorities for conservation in relation to protected area planning.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/fife_birds.png&#34; alt=&#34;fife birds&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/fife_birds.png&#34; alt=&#34;fife birds&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;spatial-methods-of-protected-area-planning&#34;&gt;Spatial methods of protected area planning&lt;/h3&gt;
 
-&lt;p&gt;This work initially focused largely on terrestrial ecosystems, and specifically the development of approaches to site selection that involved consideration of spatial criteria. The spatial configuration of protected sites is an important consideration for species persistence and I developed both heuristic and integer programming-based methods for incorporating this, in conjunction with &lt;a href=&#34;http://ace.illinois.edu/directory/h-onal&#34; target=&#34;_blank&#34;&gt;Prof Hayri Onal&lt;/a&gt;. For example papers, see &lt;a href=&#34;https://robbriers.github.io/publication/connectivity/&#34;&gt;Briers 2002&lt;/a&gt;, &lt;a href=&#34;https://robbriers.github.io/publication/connected/&#34;&gt;Onal &amp;amp; Briers 2006&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This work initially focused largely on terrestrial ecosystems, and specifically the development of approaches to site selection that involved consideration of spatial criteria. The spatial configuration of protected sites is an important consideration for species persistence and I developed both heuristic and integer programming-based methods for incorporating this, in conjunction with &lt;a href=&#34;http://ace.illinois.edu/directory/h-onal&#34; target=&#34;_blank&#34;&gt;Prof Hayri Onal&lt;/a&gt;. For example papers, see &lt;a href=&#34;/publication/connectivity/&#34;&gt;Briers 2002&lt;/a&gt;, &lt;a href=&#34;/publication/connected/&#34;&gt;Onal &amp;amp; Briers 2006&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/salmon_farm.png&#34; alt=&#34;salmon farm&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/salmon_farm.png&#34; alt=&#34;salmon farm&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;marine-spatial-planning&#34;&gt;Marine spatial planning&lt;/h3&gt;
 
-&lt;p&gt;More recently I have developed an interest in marine spatial planning (MSP) developments. Marine space is complex and commonly multi-use, requiring different approaches to the designation of space. See for example &lt;a href=&#34;https://robbriers.github.io/publication/zoning_scheme/&#34;&gt;McWhinnie et al 2015&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More recently I have developed an interest in marine spatial planning (MSP) developments. Marine space is complex and commonly multi-use, requiring different approaches to the designation of space. See for example &lt;a href=&#34;/publication/zoning_scheme/&#34;&gt;McWhinnie et al 2015&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/mangroves.png&#34; alt=&#34;mangroves&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/mangroves.png&#34; alt=&#34;mangroves&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;mangrove-protection&#34;&gt;Mangrove protection&lt;/h3&gt;
 
-&lt;p&gt;I have also begun work to combine formal optimisation methods with data on carbon stores and risk factors in mangrove ecoystems to look at approaches to prioritisation for protection and restoration. This is linked to empirical and modelling work detailed in the &lt;a href=&#34;https://robbriers.github.io/project/spatial-ecology/&#34;&gt;Spatial Ecology&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;I have also begun work to combine formal optimisation methods with data on carbon stores and risk factors in mangrove ecoystems to look at approaches to prioritisation for protection and restoration. This is linked to empirical and modelling work detailed in the &lt;a href=&#34;/project/spatial-ecology/&#34;&gt;Spatial Ecology&lt;/a&gt; section.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Spatial Ecology</title>
-      <link>https://robbriers.github.io/project/spatial-ecology/</link>
+      <link>/project/spatial-ecology/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://robbriers.github.io/project/spatial-ecology/</guid>
+      <guid>/project/spatial-ecology/</guid>
       <description>
 
 &lt;p&gt;I am interested in how populations and communities vary and interact across space. This work is wide ranging and covers both field-based and modelling approaches, often using GIS.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/trout.png&#34; alt=&#34;trout&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/trout.png&#34; alt=&#34;trout&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;stable-isotope-ecology-of-salmonids&#34;&gt;Stable isotope ecology of salmonids&lt;/h3&gt;
 
-&lt;p&gt;I am currently working with &lt;a href=&#34;http://www.tweedfoundation.org.uk&#34; target=&#34;_blank&#34;&gt;The Tweed Foundation&lt;/a&gt;, &lt;a href=&#34;http://deveron.org/&#34; target=&#34;_blank&#34;&gt;The Deveron, Isla and Bogie Charitable Trust&lt;/a&gt; and other partners using stable isotope approaches to examine the distribution of migratory and non-migratory trout reproduction across river systems. Distinction in stable isotope (C and N) characteristics allows reproduction derived from the different forms to be distinguished at the fry stage (see &lt;a href=&#34;https://robbriers.github.io/publication/carotenoids/&#34;&gt;Briers et al 2013&lt;/a&gt;), but there is a strong influence of catchment land-use on the rate and extent of temporal change post hatching, which we are currently investigating.&lt;/p&gt;
+&lt;p&gt;I am currently working with &lt;a href=&#34;http://www.tweedfoundation.org.uk&#34; target=&#34;_blank&#34;&gt;The Tweed Foundation&lt;/a&gt;, &lt;a href=&#34;http://deveron.org/&#34; target=&#34;_blank&#34;&gt;The Deveron, Isla and Bogie Charitable Trust&lt;/a&gt; and other partners using stable isotope approaches to examine the distribution of migratory and non-migratory trout reproduction across river systems. Distinction in stable isotope (C and N) characteristics allows reproduction derived from the different forms to be distinguished at the fry stage (see &lt;a href=&#34;/publication/carotenoids/&#34;&gt;Briers et al 2013&lt;/a&gt;), but there is a strong influence of catchment land-use on the rate and extent of temporal change post hatching, which we are currently investigating.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/rhizophora.png&#34; alt=&#34;mangroves&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/rhizophora.png&#34; alt=&#34;mangroves&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;mangrove-carbon-storage-and-management&#34;&gt;Mangrove carbon storage and management&lt;/h3&gt;
 
-&lt;p&gt;In conjunction with &lt;a href=&#34;http://www.napier.ac.uk/people/mark-huxham&#34; target=&#34;_blank&#34;&gt;Prof Mark Huxham&lt;/a&gt; here in the School, colleagues from &lt;a href=&#34;https://ecometrica.com&#34; target=&#34;_blank&#34;&gt;Ecometrica&lt;/a&gt; and &lt;a href=&#34;http://www.kmfri.co.ke&#34; target=&#34;_blank&#34;&gt;KMFRI&lt;/a&gt;, I have been undertaking research combining field survey with GIS and spatial statistical techniques examine variation in carbon storage in mangrove ecosystems, rates of loss drivers of change. Example papers include &lt;a href=&#34;https://robbriers.github.io/publication/mangrove_carbon/&#34;&gt;Gress et al 2017&lt;/a&gt; and &lt;a href=&#34;https://robbriers.github.io/publication/mangrove_risk/&#34;&gt;Rideout et al 2013&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In conjunction with &lt;a href=&#34;http://www.napier.ac.uk/people/mark-huxham&#34; target=&#34;_blank&#34;&gt;Prof Mark Huxham&lt;/a&gt; here in the School, colleagues from &lt;a href=&#34;https://ecometrica.com&#34; target=&#34;_blank&#34;&gt;Ecometrica&lt;/a&gt; and &lt;a href=&#34;http://www.kmfri.co.ke&#34; target=&#34;_blank&#34;&gt;KMFRI&lt;/a&gt;, I have been undertaking research combining field survey with GIS and spatial statistical techniques examine variation in carbon storage in mangrove ecosystems, rates of loss drivers of change. Example papers include &lt;a href=&#34;/publication/mangrove_carbon/&#34;&gt;Gress et al 2017&lt;/a&gt; and &lt;a href=&#34;/publication/mangrove_risk/&#34;&gt;Rideout et al 2013&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/pond4.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/pond4.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;wonderful-ponds&#34;&gt;Wonderful ponds!&lt;/h3&gt;
 
-&lt;p&gt;Ponds are great systems for addressing a whole range of ecological questions and I have a long-standing interest in patterns in population and community structure of pond dwelling organisms (mostly invertebrates) across space, along with assessment of their conservation value. See for example &lt;a href=&#34;https://robbriers.github.io/publication/urban_ponds/&#34;&gt;Hill et al &lt;em&gt;in press&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;https://robbriers.github.io/publication/spatial_pond/&#34;&gt;Briers &amp;amp; Biggs 2005&lt;/a&gt; and &lt;a href=&#34;https://robbriers.github.io/publication/metapop/&#34;&gt;Briers &amp;amp; Warren 2000&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ponds are great systems for addressing a whole range of ecological questions and I have a long-standing interest in patterns in population and community structure of pond dwelling organisms (mostly invertebrates) across space, along with assessment of their conservation value. See for example &lt;a href=&#34;/publication/urban_ponds/&#34;&gt;Hill et al &lt;em&gt;in press&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;/publication/spatial_pond/&#34;&gt;Briers &amp;amp; Biggs 2005&lt;/a&gt; and &lt;a href=&#34;/publication/metapop/&#34;&gt;Briers &amp;amp; Warren 2000&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/gam.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/gam.png&#34; alt=&#34;gam model&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;other-areas&#34;&gt;Other areas&lt;/h3&gt;
 
