@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Map on Rob Briers</title>
-    <link>/tags/map/</link>
+    <link>https://robbriers.github.io/tags/map/</link>
     <description>Recent content in Map on Rob Briers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,11 +12,11 @@
     
     <item>
       <title>Mapping the spread of a migratory bird using Twitter</title>
-      <link>/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</link>
+      <link>https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/waxwing.jpg&#34; /&gt; I like Waxwings: big, brassy, berry-eating flockers! Living on the east coast of Scotland I should have a better than average chance of seeing them, but seem to have a knack of being at places where they are seen either just before or just after they appear.&lt;/p&gt;
+      <guid>https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/waxwing.jpg&#34; /&gt; I like Waxwings: big, brassy, berry-eating flockers! Living on the east coast of Scotland I should have a better than average chance of seeing them, but seem to have a knack of being at places where they are seen either just before or just after they appear.&lt;/p&gt;
 &lt;p&gt;Luckily we have &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt; (&lt;a href=&#34;https://twitter.com/WaxwingsUK&#34; class=&#34;uri&#34;&gt;https://twitter.com/WaxwingsUK&lt;/a&gt;) on Twitter to report the sightings. Having watched the bumper crop of sightings unfold since last autumn I started to think about whether it would be possible to visualise the spread of records over time, using the info from the timeline of &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The following is my attempt. It took more than a few train journeys to work out the details and makes use of some excellent R scripts, functions and packages that other folks have put together (acknowledged in the code that follows). In order to replicate this, you need a Twitter account and register for API keys as detailed in the links.&lt;/p&gt;
 &lt;div id=&#34;stage-1-download-the-content-of-waxwingsuk-twitter-timeline-from-autumn-2016-until-present-2017-03-13.&#34; class=&#34;section level3&#34;&gt;
@@ -306,7 +306,7 @@ saveVideo(plotmaps(),interval = 0.05)&lt;/code&gt;&lt;/pre&gt;
   scale_x_continuous(limits = c(-11, 4), expand = c(0, 0)) +
   scale_y_continuous(limits = c(49, 61), expand = c(0, 0))
 p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt; Waxwing image CC0 &lt;a href=&#34;https://pixabay.com/en/waxwing-bird-rowan-rowan-berries-1163294/&#34;&gt;gustavmelin0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt; Waxwing image CC0 &lt;a href=&#34;https://pixabay.com/en/waxwing-bird-rowan-rowan-berries-1163294/&#34;&gt;gustavmelin0&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

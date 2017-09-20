@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Rob Briers</title>
-    <link>/categories/</link>
+    <link>https://robbriers.github.io/categories/</link>
     <description>Recent content in Categories on Rob Briers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,37 +11,37 @@
     
     <item>
       <title>Dataviz</title>
-      <link>/categories/dataviz/</link>
-      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      <link>https://robbriers.github.io/categories/dataviz/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/dataviz/</guid>
+      <guid>https://robbriers.github.io/categories/dataviz/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/categories/r/</link>
-      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      <link>https://robbriers.github.io/categories/r/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r/</guid>
+      <guid>https://robbriers.github.io/categories/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/categories/test/</link>
+      <link>https://robbriers.github.io/categories/test/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/test/</guid>
+      <guid>https://robbriers.github.io/categories/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>/categories/web/</link>
+      <link>https://robbriers.github.io/categories/web/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/web/</guid>
+      <guid>https://robbriers.github.io/categories/web/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,151 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Rob Briers</title>
-    <link>/categories/r/</link>
+    <link>https://robbriers.github.io/categories/r/</link>
     <description>Recent content in R on Rob Briers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Rob Briers</copyright>
-    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/r/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Auto kite-diagrams from googlesheets</title>
+      <link>https://robbriers.github.io/post/auto-kite-diagrams-from-googlesheets/</link>
+      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbriers.github.io/post/auto-kite-diagrams-from-googlesheets/</guid>
+      <description>&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://robbriers.github.io/img/millport.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;Every October, we take a party of third year undergraduates to the Isle of Cumbrae for residential field course at &lt;a href=&#34;http://www.field-studies-council.org/centres/scotland/millport.aspx&#34;&gt;FSC Millport&lt;/a&gt;. Whilst there, they are immersed in a world of intertidal ecology, looking at influences of habitat characteristics, adaptation and interactions that makes the descriptions and illustrations of Begon or Molles a little more real and apparent.&lt;/p&gt;
+&lt;p&gt;As part of the work, we look at zonation on both rocky and sandy shores (like a million other student groups!). The class work together to collate data from transects up the shore and examine patterns of distribution.&lt;/p&gt;
+&lt;p&gt;The classic (although some would say not ideal) way of illustrating such zonation patterns is through kite diagrams. Back in the day, we made use of the Fieldworks software which as far as I can determine is no longer available and was rather clunky as well. As we worked in groups across several labs, this also required running around with a USB stick to compile the data from the different groups, before doing the final plotting.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://robbriers.github.io/img/rockyshore.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;Fast forward a few years and we started to use a shared Google spreadsheet to collate the data instead, which made life a lot easier on that front. The actual kite diagram production was still not straightforward and I experimented with various Excel-based solutions, before starting to work with R code that I found on the internet.&lt;/p&gt;
+&lt;p&gt;This year I was determined to try and make the process more streamlined, hence the current post. The &lt;code&gt;googlekites&lt;/code&gt; function allows the automatic production of kite diagrams from a shared Google spreadsheet. I can’t claim much credit for this however; the core code for the kite diagram comes from David Hood, see &lt;a href=&#34;https://rpubs.com/thoughtfulbloke/kitegraph&#34;&gt;here&lt;/a&gt;. All I did was to add in code to wrangle the data from the spreadsheet into a suitable format and add a few bells and whistles to the actual plotting, such as modifying the axis ticks and using better &lt;a href=&#34;https://cran.r-project.org/package=viridis&#34;&gt;viridis&lt;/a&gt;-based colours.&lt;/p&gt;
+&lt;p&gt;The function has two arguments:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sheet_ref&lt;/code&gt;: the full URL to the Google spreadsheet that is being used. The sheet needs to be set to be shared appropriately.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;min_abund&lt;/code&gt;: the minimum total abundance of taxa that should be plotted. Taxa with low total numbers are often difficult to interpret in terms of distribution patterns. This defaults to 50; too low a value can result in the plot becoming very crowded.&lt;/p&gt;
+&lt;p&gt;The spreadsheet import is handled by the &lt;a href=&#34;https://cran.r-project.org/package=gsheet&#34;&gt;gsheet&lt;/a&gt; package. I could have used the &lt;a href=&#34;https://cran.r-project.org/package=googlesheets&#34;&gt;googlesheets&lt;/a&gt; package as an alternative, but this has quite a large footprint in terms of dependencies so &lt;code&gt;gsheet&lt;/code&gt; keeps it lightweight. The only other dependency is &lt;a href=&#34;https://cran.r-project.org/package=viridis&#34;&gt;viridis&lt;/a&gt;, for the colour-blind friendly colour scheme.&lt;/p&gt;
+&lt;p&gt;The example spreadsheet used can be found &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1pv041th4inXsSRTy8afM0gE14dgeR9TvwmJWEnnC6LQ/edit#gid=0&#34;&gt;here&lt;/a&gt;. It may not have the most logical setup from some perspectives, but it works for us and the code in the function can be easily adapted to other setups.&lt;/p&gt;
+&lt;p&gt;Full code for the function is given below:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# googlekites function: check out the layout of the data in the spreadsheet
+# above before trying to use/adapt this
+
+googlekites&amp;lt;-function(sheet_ref, min_abund=50){
+  require(gsheet)
+  require(viridis)
+  
+  # turn off warnings temporarily, as columns do not have headers
+  options(warn=-1)
+  
+  # import data from GoogleSheet
+  survey&amp;lt;-gsheet2tbl(sheet_ref)
+  
+  # remove station row
+  survey&amp;lt;-survey[-c(3), ]
+  
+  # extract taxon names etc (first column), use [[]] notation 
+  # to convert to vector
+  rn&amp;lt;-survey[[1]]
+
+  # remove column from df
+  survey&amp;lt;-survey[-1]
+  
+  # convert to numeric matrix
+  survey&amp;lt;-data.matrix(survey)
+
+  # transpose
+  survey&amp;lt;-t(survey)
+  
+  # revert to dataframe and add column names
+  survey&amp;lt;-as.data.frame(survey)
+  names(survey)&amp;lt;-rn
+  
+  # work out summed abundance by station (col 2)
+  # survey$Station
+  surveysum&amp;lt;-aggregate(survey, by=list(survey[,2]), sum, na.rm=TRUE)
+
+  # remove taxa that are not above min_abund
+  surveysum&amp;lt;-surveysum[, -which(colSums(surveysum) &amp;lt; min_abund)]
+
+  # remove group and station columns
+  surveysum&amp;lt;-surveysum[, -c(1, 3)]
+  
+  # rescale the abundances for the plotting of the polygons
+  # scaled based on the max abundance of any of the taxa being plotted
+  surveysum[,2:ncol(surveysum)] &amp;lt;- (surveysum[,2:ncol(surveysum)] / max(surveysum[,2:ncol(surveysum)]))/2
+  
+  # copy data for polygon coordinate creation
+  surveysum2 &amp;lt;- surveysum
+  
+  # reverse order for polygons plotting
+  surveysum2 &amp;lt;- surveysum2[order(surveysum2[,1], decreasing = TRUE),]
+  
+  # make values negative
+  surveysum2[,2:ncol(surveysum2)] &amp;lt;- surveysum2[,2:ncol(surveysum2)] * -1
+  
+  # bind data
+  surveysum &amp;lt;- rbind(surveysum,surveysum2)
+  
+  # work out plot dimensions
+  leftedge &amp;lt;- min(surveysum[,1])
+  rightedge &amp;lt;- max(surveysum[,1])
+  bottomedge &amp;lt;- 0
+  topedge &amp;lt;- ncol(surveysum) #-1
+  
+  # save old margins
+  oldMargins &amp;lt;- par()$mar
+  par(mar=c(5.1,7,2,2.1))
+  
+  # make blank plot and add axes/ticks
+  plot(c(leftedge,rightedge), c(bottomedge, topedge), type= &amp;quot;n&amp;quot;, xlab=names(surveysum)[1], frame.plot=F, yaxt=&amp;quot;n&amp;quot;, ylab=&amp;quot;&amp;quot;)
+  axis(1, at=surveysum[,1])
+  axis(2, labels=names(surveysum)[2:ncol(surveysum)], font=3, at=1:(ncol(surveysum)-1), las=2, lty=0)
+  
+  # set up viridis colour sequence
+  colours&amp;lt;-viridis(ncol(surveysum)-1, alpha = 1, begin = 0, end = 1, direction = 1, option = &amp;quot;D&amp;quot;)
+
+  # loop through columns, creating polygons
+  xValues = surveysum[,1]
+  for (i in 2:ncol(surveysum)){
+    yValues = i + surveysum[,i] - 1
+    polygon(xValues,yValues, col=colours[[i-1]], border=colours[[i-1]])
+  }
+  
+  # reset margins
+  par(mar=oldMargins)
+  
+  # turn warnings back on
+  options(warn=0)
+}
+# end of function&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example of use, based on the spreadsheet linked above.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set the values for the two arguments
+sheet_ref&amp;lt;-&amp;#39;https://docs.google.com/spreadsheets/d/1pv041th4inXsSRTy8afM0gE14dgeR9TvwmJWEnnC6LQ/edit#gid=0&amp;#39;
+
+min_abund&amp;lt;-70
+
+# run the function
+googlekites(sheet_ref, min_abund)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## No encoding supplied: defaulting to UTF-8.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/post/2017-09-19-auto-kite-diagrams-from-googlesheets_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;First field testing will come in three weeks when we are off on the trip again, so there may be a few tweaks as a result afterwards!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Mapping the spread of a migratory bird using Twitter</title>
-      <link>/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</link>
+      <link>https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;/img/waxwing.jpg&#34; /&gt; I like Waxwings: big, brassy, berry-eating flockers! Living on the east coast of Scotland I should have a better than average chance of seeing them, but seem to have a knack of being at places where they are seen either just before or just after they appear.&lt;/p&gt;
+      <guid>https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/img/waxwing.jpg&#34; /&gt; I like Waxwings: big, brassy, berry-eating flockers! Living on the east coast of Scotland I should have a better than average chance of seeing them, but seem to have a knack of being at places where they are seen either just before or just after they appear.&lt;/p&gt;
 &lt;p&gt;Luckily we have &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt; (&lt;a href=&#34;https://twitter.com/WaxwingsUK&#34; class=&#34;uri&#34;&gt;https://twitter.com/WaxwingsUK&lt;/a&gt;) on Twitter to report the sightings. Having watched the bumper crop of sightings unfold since last autumn I started to think about whether it would be possible to visualise the spread of records over time, using the info from the timeline of &lt;span class=&#34;citation&#34;&gt;@WaxwingsUK&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The following is my attempt. It took more than a few train journeys to work out the details and makes use of some excellent R scripts, functions and packages that other folks have put together (acknowledged in the code that follows). In order to replicate this, you need a Twitter account and register for API keys as detailed in the links.&lt;/p&gt;
 &lt;div id=&#34;stage-1-download-the-content-of-waxwingsuk-twitter-timeline-from-autumn-2016-until-present-2017-03-13.&#34; class=&#34;section level3&#34;&gt;
@@ -306,7 +436,7 @@ saveVideo(plotmaps(),interval = 0.05)&lt;/code&gt;&lt;/pre&gt;
   scale_x_continuous(limits = c(-11, 4), expand = c(0, 0)) +
   scale_y_continuous(limits = c(49, 61), expand = c(0, 0))
 p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt; Waxwing image CC0 &lt;a href=&#34;https://pixabay.com/en/waxwing-bird-rowan-rowan-berries-1163294/&#34;&gt;gustavmelin0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/post/2017-03-14-mapping-the-spread-of-a-migratory-bird-using-twitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt; Waxwing image CC0 &lt;a href=&#34;https://pixabay.com/en/waxwing-bird-rowan-rowan-berries-1163294/&#34;&gt;gustavmelin0&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
