@@ -11,12 +11,31 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Community heterogeneity of aquatic macroinvertebrates in urban ponds at a multi-city scale</title>
+      <link>https://robbriers.github.io/publication/beta_ponds/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbriers.github.io/publication/beta_ponds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developing an empirical approach to optimal camera-trap deployment at mammal resting sites: evidence from a longitudinal study of an otter *Lutra lutra* holt</title>
+      <link>https://robbriers.github.io/publication/otter_camera/</link>
+      <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbriers.github.io/publication/otter_camera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Auto kite-diagrams from googlesheets</title>
       <link>https://robbriers.github.io/post/auto-kite-diagrams-from-googlesheets/</link>
       <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://robbriers.github.io/post/auto-kite-diagrams-from-googlesheets/</guid>
-      <description>&lt;div class=&#34;figure&#34;&gt;
+      <description>&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;viridis&amp;#39; was built under R version 3.4.3&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://robbriers.github.io/img/millport.png&#34; /&gt;
 
 &lt;/div&gt;
@@ -134,7 +153,6 @@ min_abund&amp;lt;-70
 
 # run the function
 googlekites(sheet_ref, min_abund)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## No encoding supplied: defaulting to UTF-8.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/post/2017-09-19-auto-kite-diagrams-from-googlesheets_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;First field testing will come in three weeks when we are off on the trip again, so there may be a few tweaks as a result afterwards!&lt;/p&gt;
 </description>
@@ -698,24 +716,6 @@ ggplot(df, aes(x=x.coord, y=y.coord)) +
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://robbriers.github.io/publication/zoning_scheme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Structural and functional indices show similar performance in marine ecosystem quality assessment</title>
-      <link>https://robbriers.github.io/publication/indicators/</link>
-      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/indicators/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Invertebrate Communities and Environmental Conditions in a Series of Urban Drainage Ponds in Eastern Scotland: Implications for Biodiversity and Conservation Value of SUDS</title>
-      <link>https://robbriers.github.io/publication/suds/</link>
-      <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/suds/</guid>
       <description></description>
     </item>
     

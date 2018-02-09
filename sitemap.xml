@@ -4,6 +4,22 @@
     
     
     <url>
+      <loc>https://robbriers.github.io/publication/beta_ponds/</loc>
+      <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://robbriers.github.io/publication/otter_camera/</loc>
+      <lastmod>2017-11-29T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://robbriers.github.io/post/auto-kite-diagrams-from-googlesheets/</loc>
       <lastmod>2017-09-19T00:00:00+00:00</lastmod>
     </url>
@@ -349,7 +365,7 @@
     
     <url>
       <loc>https://robbriers.github.io/publication_types/2/</loc>
-      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -401,7 +417,7 @@
     
     
     <url>
-      <loc>https://robbriers.github.io/tags/dataviz/</loc>
+      <loc>https://robbriers.github.io/categories/dataviz/</loc>
       <lastmod>2017-09-19T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -410,7 +426,7 @@
     
     
     <url>
-      <loc>https://robbriers.github.io/categories/dataviz/</loc>
+      <loc>https://robbriers.github.io/tags/dataviz/</loc>
       <lastmod>2017-09-19T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -456,16 +472,7 @@
     
     <url>
       <loc>https://robbriers.github.io/publication_types/</loc>
-      <lastmod>2017-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-      <loc>https://robbriers.github.io/tags/r/</loc>
-      <lastmod>2017-09-19T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -474,6 +481,15 @@
     
     <url>
       <loc>https://robbriers.github.io/categories/r/</loc>
+      <lastmod>2017-09-19T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://robbriers.github.io/tags/r/</loc>
       <lastmod>2017-09-19T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>

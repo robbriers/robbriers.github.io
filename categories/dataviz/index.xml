@@ -16,7 +16,8 @@
       <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://robbriers.github.io/post/auto-kite-diagrams-from-googlesheets/</guid>
-      <description>&lt;div class=&#34;figure&#34;&gt;
+      <description>&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;viridis&amp;#39; was built under R version 3.4.3&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://robbriers.github.io/img/millport.png&#34; /&gt;
 
 &lt;/div&gt;
@@ -134,7 +135,6 @@ min_abund&amp;lt;-70
 
 # run the function
 googlekites(sheet_ref, min_abund)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## No encoding supplied: defaulting to UTF-8.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://robbriers.github.io/post/2017-09-19-auto-kite-diagrams-from-googlesheets_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;First field testing will come in three weeks when we are off on the trip again, so there may be a few tweaks as a result afterwards!&lt;/p&gt;
 </description>

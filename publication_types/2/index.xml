@@ -7,8 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Rob Briers</copyright>
-    <lastBuildDate>Wed, 01 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Community heterogeneity of aquatic macroinvertebrates in urban ponds at a multi-city scale</title>
+      <link>https://robbriers.github.io/publication/beta_ponds/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbriers.github.io/publication/beta_ponds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developing an empirical approach to optimal camera-trap deployment at mammal resting sites: evidence from a longitudinal study of an otter *Lutra lutra* holt</title>
+      <link>https://robbriers.github.io/publication/otter_camera/</link>
+      <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbriers.github.io/publication/otter_camera/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Urban ponds as an aquatic biodiversity resource in modified landscapes</title>
@@ -124,24 +142,6 @@
       <pubDate>Wed, 01 Mar 2006 00:00:00 +0000</pubDate>
       
       <guid>https://robbriers.github.io/publication/connected/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spatial patterns in pond invertehrate communities: separating environmental and distance effects</title>
-      <link>https://robbriers.github.io/publication/spatial_pond/</link>
-      <pubDate>Tue, 01 Nov 2005 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/spatial_pond/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Designing a conservation reserve network with minimal fragmentation: A linear integer programming approach</title>
-      <link>https://robbriers.github.io/publication/min_frag/</link>
-      <pubDate>Thu, 01 Sep 2005 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/min_frag/</guid>
       <description></description>
     </item>
     
