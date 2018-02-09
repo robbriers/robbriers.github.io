@@ -20,7 +20,7 @@
     </item>
     
     <item>
-      <title>Developing an empirical approach to optimal camera-trap deployment at mammal resting sites: evidence from a longitudinal study of an otter *Lutra lutra* holt</title>
+      <title>Developing an empirical approach to optimal camera-trap deployment at mammal resting sites: evidence from a longitudinal study of an otter Lutra lutra holt</title>
       <link>https://robbriers.github.io/publication/otter_camera/</link>
       <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
       
@@ -34,8 +34,7 @@
       <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://robbriers.github.io/post/auto-kite-diagrams-from-googlesheets/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;viridis&amp;#39; was built under R version 3.4.3&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;
+      <description>&lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://robbriers.github.io/img/millport.png&#34; /&gt;
 
 &lt;/div&gt;
