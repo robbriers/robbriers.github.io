@@ -1,0 +1,23 @@
+---
+abstract: "Urbanization is a global process contributing to the loss and fragmentation of natural habitats. Many studies have focused on the biological response of terrestrial taxa and habitats to urbanization. However, little is known regarding the consequences of urbanization on freshwater habitats, especially small lentic systems. In this study, we examined aquatic macro-invertebrate diversity (family and species level) and variation in community composition between 240 urban and 782 nonurban ponds distributed across the United Kingdom. Contrary to predictions, urban ponds supported similar numbers of invertebrate species and families compared to nonurban ponds. Similar gamma diversity was found between the two groups at both family and species taxonomic levels. The biological communities of urban ponds were markedly different to those of nonurban ponds, and the variability in urban pond community composition was greater than that in nonurban ponds, contrary to previous work showing homogenization of communities in urban areas. Positive spatial autocorrelation was recorded for urban and nonurban ponds at 0-50km (distance between pond study sites) and negative spatial autocorrelation was observed at 100-150km and was stronger in urban ponds in both cases. Ponds do not follow the same ecological patterns as terrestrial and lotic habitats (reduced taxonomic richness) in urban environments; in contrast, they support high taxonomic richness and contribute significantly to regional faunal diversity. Individual cities are complex structural mosaics which evolve over long periods of time and are managed in diverse ways. This facilitates the development of a wide range of environmental conditions and habitat niches in urban ponds which can promote greater heterogeneity between pond communities at larger scales. Ponds provide an opportunity for managers and environmental regulators to conserve and enhance freshwater biodiversity in urbanized landscapes whilst also facilitating key ecosystem services including storm water storage and water treatment."
+authors:
+- Hill MJ
+- Biggs J
+- Thornhill I
+- admin
+- Gledhill DH
+- White JC
+- Wood PJ
+date: "2017-03-01""
+image:
+image_preview:
+math: false
+publication_types: 
+- "2"
+publication: "*Global Change Biology* **23**, 986-999"
+selected: true
+title: "Urban ponds as an aquatic biodiversity resource in modified landscapes"
+doi: 10.1111/gcb.13401
+#url_project: "project/deep-learning/"
+
+---

@@ -1,30 +1,166 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Rob Briers</title>
+    <title>Publications | Rob Briers</title>
     <link>https://robbriers.github.io/publication/</link>
-    <description>Recent content in Publications on Rob Briers</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017 Rob Briers</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
+      <atom:link href="https://robbriers.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://robbriers.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Publications</title>
+      <link>https://robbriers.github.io/publication/</link>
+    </image>
+    
+    <item>
+      <title>An evidence-based approach to identifying resting sites of Eurasian otter Lutra lutra from camera-trap and field-sign data</title>
+      <link>https://robbriers.github.io/publication/resting/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/resting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effects of pile driving sound playbacks and cadmium co-exposure on the early life stage development of the Norway lobster, Nephrops norvegicus</title>
+      <link>https://robbriers.github.io/publication/neph_noise/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/neph_noise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantification and characterisation of pre-production pellet pollution in the Avon-Heathcote Estuary/Ihutai, Aotearoa-New Zealand</title>
+      <link>https://robbriers.github.io/publication/micro_plast/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/micro_plast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Marine invertebrate anthropogenic noise research-Trends in methods and future directions</title>
+      <link>https://robbriers.github.io/publication/noise_methods/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/noise_methods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pond ecology and conservation: research priorities and knowledge gaps</title>
+      <link>https://robbriers.github.io/publication/pond_review/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/pond_review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Same data, different conclusions: Radical dispersion in empirical results when independent analysts operationalize and test the same hypothesis</title>
+      <link>https://robbriers.github.io/publication/same_data/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/same_data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genetic diversity of the Nubian ibex in Oman as revealed by mitochondrial DNA</title>
+      <link>https://robbriers.github.io/publication/ibex_gen/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/ibex_gen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Local contributions to beta diversity in urban pond networks: Implications for biodiversity conservation and management</title>
+      <link>https://robbriers.github.io/publication/pond_beta/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/pond_beta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-scale habitat selection and spatial analysis reveals a mismatch between the wintering distribution of a threatened population of Taiga Bean Geese Anser fabalis and its protected area</title>
+      <link>https://robbriers.github.io/publication/bean_geese/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/bean_geese/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First genetic evidence that invasive bullhead (Cottus L. 1758) in Scotland is of English origin and the difficulty of resolving the European Cottus species taxonomy</title>
+      <link>https://robbriers.github.io/publication/bullhead/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/bullhead/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Component processes of detection probability in camera-trap studies: understanding the occurrence of false-negatives</title>
+      <link>https://robbriers.github.io/publication/mamres2020/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/mamres2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Increasing intensities of Anisakis simplex third-stage larvae (L3) in Atlantic salmon of coastal waters of Scotland</title>
+      <link>https://robbriers.github.io/publication/pv2020/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/pv2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>From DNA to ecological performance: Effects of anthropogenic noise on a reef-building mussel</title>
+      <link>https://robbriers.github.io/publication/stoten2019/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/stoten2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Response of a marine benthic invertebrate community and biotic indices to organic enrichment from sewage disposal</title>
+      <link>https://robbriers.github.io/publication/jmba2019/</link>
+      <pubDate>Mon, 28 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/jmba2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cde - R package to retrieve data from the Environment Agency Catchment Data Explorer site</title>
+      <link>https://robbriers.github.io/publication/joss2019/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/joss2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The thin(ning) green line? Investigating changes in Kenya&#39;s seagrass coverage</title>
+      <link>https://robbriers.github.io/publication/biollett2018/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/biollett2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The functional response and resilience in small waterbodies along land-use and environmental gradients</title>
+      <link>https://robbriers.github.io/publication/gcb2018/gcb2018/</link>
+      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/gcb2018/gcb2018/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Community heterogeneity of aquatic macroinvertebrates in urban ponds at a multi-city scale</title>
-      <link>https://robbriers.github.io/publication/beta_ponds/</link>
+      <link>https://robbriers.github.io/publication/beta_ponds/beta_ponds/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/beta_ponds/</guid>
+      <guid>https://robbriers.github.io/publication/beta_ponds/beta_ponds/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Developing an empirical approach to optimal camera-trap deployment at mammal resting sites: evidence from a longitudinal study of an otter Lutra lutra holt</title>
-      <link>https://robbriers.github.io/publication/otter_camera/</link>
+      <link>https://robbriers.github.io/publication/otter_camera/otter_camera/</link>
       <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/otter_camera/</guid>
+      <guid>https://robbriers.github.io/publication/otter_camera/otter_camera/</guid>
       <description></description>
     </item>
     
@@ -32,35 +168,31 @@
       <title>Urban ponds as an aquatic biodiversity resource in modified landscapes</title>
       <link>https://robbriers.github.io/publication/urban_ponds/</link>
       <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://robbriers.github.io/publication/urban_ponds/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Evaluating, predicting and mapping belowground carbon stores in Kenyan mangroves</title>
-      <link>https://robbriers.github.io/publication/mangrove_carbon/</link>
+      <link>https://robbriers.github.io/publication/mangrove_carbon/mangrove_carbon/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/mangrove_carbon/</guid>
+      <guid>https://robbriers.github.io/publication/mangrove_carbon/mangrove_carbon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Eurasian lynx natal den site and maternal home-range selection in multi-use landscapes of Norway</title>
-      <link>https://robbriers.github.io/publication/lynx_dens/</link>
+      <link>https://robbriers.github.io/publication/lynx_dens/lynx_dens/</link>
       <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/lynx_dens/</guid>
+      <guid>https://robbriers.github.io/publication/lynx_dens/lynx_dens/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Applying Climate Compatible Development and economic valuation to coastal management: A case study of Kenya&#39;s mangrove forests</title>
-      <link>https://robbriers.github.io/publication/mangrove_ccd/</link>
+      <link>https://robbriers.github.io/publication/mangrove_ccd/mangrove_ccd/</link>
       <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/mangrove_ccd/</guid>
+      <guid>https://robbriers.github.io/publication/mangrove_ccd/mangrove_ccd/</guid>
       <description></description>
     </item>
     
@@ -68,17 +200,15 @@
       <title>The development and testing of a multiple-use zoning scheme for Scottish waters</title>
       <link>https://robbriers.github.io/publication/zoning_scheme/</link>
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://robbriers.github.io/publication/zoning_scheme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Structural and functional indices show similar performance in marine ecosystem quality assessment</title>
-      <link>https://robbriers.github.io/publication/indicators/</link>
+      <link>https://robbriers.github.io/publication/indicators/indicators/</link>
       <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/indicators/</guid>
+      <guid>https://robbriers.github.io/publication/indicators/indicators/</guid>
       <description></description>
     </item>
     
@@ -86,62 +216,207 @@
       <title>Invertebrate Communities and Environmental Conditions in a Series of Urban Drainage Ponds in Eastern Scotland: Implications for Biodiversity and Conservation Value of SUDS</title>
       <link>https://robbriers.github.io/publication/suds/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://robbriers.github.io/publication/suds/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Making predictions of mangrove deforestation: a comparison of two methods in Kenya</title>
-      <link>https://robbriers.github.io/publication/mangrove_risk/</link>
+      <link>https://robbriers.github.io/publication/mangrove_risk/mangrove_risk/</link>
       <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/mangrove_risk/</guid>
+      <guid>https://robbriers.github.io/publication/mangrove_risk/mangrove_risk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mapping of mangrove forest land cover change along the Kenya coastline using Landsat imagery</title>
-      <link>https://robbriers.github.io/publication/mangrove_change/</link>
+      <link>https://robbriers.github.io/publication/mangrove_change/mangrove_change/</link>
       <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/mangrove_change/</guid>
+      <guid>https://robbriers.github.io/publication/mangrove_change/mangrove_change/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Population differentiation and temporal changes of carotenoid pigments and stable isotope ratios in the offspring of anadromous and non-anadromous trout Salmo trutta</title>
-      <link>https://robbriers.github.io/publication/carotenoids/</link>
+      <link>https://robbriers.github.io/publication/carotenoids/carotenoids/</link>
       <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/carotenoids/</guid>
+      <guid>https://robbriers.github.io/publication/carotenoids/carotenoids/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aquatic Insects: challenges to populations</title>
-      <link>https://robbriers.github.io/publication/aquatic_insects/</link>
+      <link>https://robbriers.github.io/publication/aquatic_insects/aquatic_insects/</link>
       <pubDate>Tue, 01 Jul 2008 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/aquatic_insects/</guid>
+      <guid>https://robbriers.github.io/publication/aquatic_insects/aquatic_insects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The ecological effectiveness of protected areas: The United Kingdom</title>
-      <link>https://robbriers.github.io/publication/protected_areas/</link>
+      <link>https://robbriers.github.io/publication/protected_areas/protected_areas/</link>
       <pubDate>Fri, 01 Sep 2006 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/protected_areas/</guid>
+      <guid>https://robbriers.github.io/publication/protected_areas/protected_areas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Phenotype-environment matching in the shore crab (Carcinus maenas)</title>
-      <link>https://robbriers.github.io/publication/phenotype/</link>
+      <link>https://robbriers.github.io/publication/phenotype/phenotype/</link>
       <pubDate>Sat, 01 Apr 2006 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/publication/phenotype/</guid>
+      <guid>https://robbriers.github.io/publication/phenotype/phenotype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimal selection of a connected reserve network</title>
+      <link>https://robbriers.github.io/publication/connected/connected/</link>
+      <pubDate>Wed, 01 Mar 2006 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/connected/connected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatial patterns in pond invertehrate communities: separating environmental and distance effects</title>
+      <link>https://robbriers.github.io/publication/spatial_pond/</link>
+      <pubDate>Tue, 01 Nov 2005 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/spatial_pond/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Designing a conservation reserve network with minimal fragmentation: A linear integer programming approach</title>
+      <link>https://robbriers.github.io/publication/min_frag/min_frag/</link>
+      <pubDate>Thu, 01 Sep 2005 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/min_frag/min_frag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quantifying two-dimensional dichromatic patterns using a photographic technique: case study on the shore crab (Carcinus maenas L.)</title>
+      <link>https://robbriers.github.io/publication/crab_patterns/crab_patterns/</link>
+      <pubDate>Fri, 01 Jul 2005 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/crab_patterns/crab_patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The lateral extent of the subsidy from an upland stream to riparian lycosid spiders</title>
+      <link>https://robbriers.github.io/publication/subsidy/</link>
+      <pubDate>Fri, 01 Apr 2005 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/subsidy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effects of the North Atlantic Oscillation on growth and phenology of stream insects</title>
+      <link>https://robbriers.github.io/publication/nao/nao/</link>
+      <pubDate>Wed, 01 Dec 2004 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/nao/nao/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The relationship between abundance and prevalence of trematode parasites infecting Lymnaea stagnalis L.</title>
+      <link>https://robbriers.github.io/publication/trematode/</link>
+      <pubDate>Wed, 01 Dec 2004 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/trematode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Riparian forest management and adult stream insects</title>
+      <link>https://robbriers.github.io/publication/riparian/riparian/</link>
+      <pubDate>Tue, 01 Jun 2004 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/riparian/riparian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inter-population dispersal by adult stoneflies detected by stable isotope enrichment</title>
+      <link>https://robbriers.github.io/publication/iso_dispersal/iso_dispersal/</link>
+      <pubDate>Thu, 01 Apr 2004 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/iso_dispersal/iso_dispersal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Range limits and parasite prevalence in a freshwater snail</title>
+      <link>https://robbriers.github.io/publication/snail_range/snail_range/</link>
+      <pubDate>Sat, 01 Nov 2003 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/snail_range/snail_range/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Indicator taxa for the conservation of pond invertebrate diversity</title>
+      <link>https://robbriers.github.io/publication/indicator_ponds/indicator_ponds/</link>
+      <pubDate>Fri, 01 Aug 2003 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/indicator_ponds/indicator_ponds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selection of a minimum-boundary reserve network using integer programming</title>
+      <link>https://robbriers.github.io/publication/min_bound/min_bound/</link>
+      <pubDate>Tue, 01 Jul 2003 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/min_bound/min_bound/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flight activity of adult stoneflies in relation to weather</title>
+      <link>https://robbriers.github.io/publication/flight_activity/flight_activity/</link>
+      <pubDate>Sat, 01 Feb 2003 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/flight_activity/flight_activity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Range size and environmental calcium requirements of British freshwater gastropods</title>
+      <link>https://robbriers.github.io/publication/snail_range_size/snail_range_size/</link>
+      <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/snail_range_size/snail_range_size/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Incorporating spatial criteria in optimum reserve network selection</title>
+      <link>https://robbriers.github.io/publication/spatial_integer/</link>
+      <pubDate>Sun, 01 Dec 2002 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/spatial_integer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dispersal of adult stoneflies (Plecoptera) from upland streams draining catchments with contrasting land-use</title>
+      <link>https://robbriers.github.io/publication/dispersal_landuse/dispersal_landuse/</link>
+      <pubDate>Fri, 01 Nov 2002 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/dispersal_landuse/dispersal_landuse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Incorporating connectivity into reserve selection procedures</title>
+      <link>https://robbriers.github.io/publication/connectivity/connectivity/</link>
+      <pubDate>Tue, 01 Jan 2002 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/connectivity/connectivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Population turnover and habitat dynamics in Notonecta (Hemiptera: Notonectidae) metapopulations</title>
+      <link>https://robbriers.github.io/publication/metapop/metapop/</link>
+      <pubDate>Mon, 01 May 2000 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/metapop/metapop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Competition between the nymphs of two regionally co-occurring species of Notonecta (Hemiptera : Notonectidae)</title>
+      <link>https://robbriers.github.io/publication/noto_comp/noto_comp/</link>
+      <pubDate>Sun, 01 Aug 1999 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/publication/noto_comp/noto_comp/</guid>
       <description></description>
     </item>
     

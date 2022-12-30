@@ -1,49 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Rob Briers</title>
+    <title>Categories | Rob Briers</title>
     <link>https://robbriers.github.io/categories/</link>
-    <description>Recent content in Categories on Rob Briers</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017 Rob Briers</copyright>
-    <atom:link href="/categories/" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Dataviz</title>
-      <link>https://robbriers.github.io/categories/dataviz/</link>
-      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/categories/dataviz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://robbriers.github.io/categories/r/</link>
-      <pubDate>Tue, 19 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/categories/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://robbriers.github.io/categories/test/</link>
-      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/categories/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://robbriers.github.io/categories/web/</link>
-      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbriers.github.io/categories/web/</guid>
-      <description></description>
-    </item>
+      <atom:link href="https://robbriers.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Categories</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <image>
+      <url>https://robbriers.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Categories</title>
+      <link>https://robbriers.github.io/categories/</link>
+    </image>
     
   </channel>
 </rss>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Other | Rob Briers</title>
+    <link>https://robbriers.github.io/tag/other/</link>
+      <atom:link href="https://robbriers.github.io/tag/other/index.xml" rel="self" type="application/rss+xml" />
+    <description>Other</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://robbriers.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Other</title>
+      <link>https://robbriers.github.io/tag/other/</link>
+    </image>
+    
+    <item>
+      <title>Aquatic carbon</title>
+      <link>https://robbriers.github.io/project/aquatic-carbon/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/project/aquatic-carbon/</guid>
+      <description>&lt;p&gt;I am interested in carbon stores and flows within aquatic systems. I have worked for some years with Prof Mark Huxham looking at carbon storage within mangrove ecosystems and we have more recently begun to focu on seagrass as well.&lt;/p&gt;
+&lt;p&gt;Within freshwaters I am interested in carbon flows through upland streams, and particularly the role of methane as a carbon source in such systems.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My next exciting project</title>
+      <link>https://robbriers.github.io/project/bioacoustics/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/project/bioacoustics/</guid>
+      <description>&lt;p&gt;This is the details of the project.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My next exciting project</title>
+      <link>https://robbriers.github.io/project/conservation-science/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/project/conservation-science/</guid>
+      <description>&lt;p&gt;This is the details of the project.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My next exciting project</title>
+      <link>https://robbriers.github.io/project/next/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/project/next/</guid>
+      <description>&lt;p&gt;This is the details of the project.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My next exciting project</title>
+      <link>https://robbriers.github.io/project/ponds/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/project/ponds/</guid>
+      <description>&lt;p&gt;This is the details of the project.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My next exciting project</title>
+      <link>https://robbriers.github.io/project/spatial-ecology/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>https://robbriers.github.io/project/spatial-ecology/</guid>
+      <description>&lt;p&gt;This is the details of the project.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
